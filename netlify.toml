@@ -4,10 +4,9 @@ command = "node -v"
 # functions = "netlify/functions"
 publish = "."
 
-[[edge_functions]]
-function = "react"
-path = "/react"
-
+# [[edge_functions]]
+# function = "react"
+# path = "/react"
 # [[edge_functions]]
 # function = "og"
 # path = "/og"
