@@ -6,7 +6,7 @@ publish = "."
 
 [[edge_functions]]
 function = "react"
-path = "/"
+path = "/react"
 
 # [[edge_functions]]
 # function = "og"
