@@ -8,9 +8,10 @@ publish = "."
 function = "react"
 path = "/react"
 
-# [[edge_functions]]
-# function = "og"
-# path = "/og"
+[[edge_functions]]
+function = "og"
+path = "/og"
+
 [[edge_functions]]
 function = "cache"
 path = "/cache"
