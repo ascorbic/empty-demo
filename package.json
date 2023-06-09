@@ -1,0 +1,11 @@
+{
+  "name": "empty-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ascorbic/empty-demo.git",
+  "author": "Matt Kane <m@mk.gg>",
+  "license": "MIT",
+  "dependencies": {
+    "@netlify/functions": "^1.6.0"
+  }
+}
