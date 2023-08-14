@@ -6,8 +6,8 @@ export const handler = stream(async () => {
             controller.enqueue("Wait...\n\n");
             let i = 0
             const timer = setInterval(() => {
-                controller.enqueue(`Hello, world! ${i++}\n\n`);
-                if (i > 10) {
+                controller.enqueue(`Hello, world! ${i}\n\n`);
+                if (i++ > 10) {
                     controller.close();
                     clearInterval(timer);
                 }
