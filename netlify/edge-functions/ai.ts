@@ -28,12 +28,6 @@ export default async function POST(req: Request) {
   const stream = OpenAIStream(response)
 
 
-  return new Response(stream, {
-    status: 200,
-    headers: {
-        'content-type': 'text/plain; charset=UTF-8',
-    },
-  })
 
   // Respond with the stream
   const res = new StreamingTextResponse(stream)

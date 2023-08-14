@@ -1,4 +1,5 @@
 import { env, pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.5.0'
+import { Config } from "https://edge.netlify.com/";
 
 env.useBrowserCache = false
 env.allowLocalModels = false
@@ -29,4 +30,8 @@ const { input } = await req.json()
     JSON.stringify({ embedding }),
     { headers: { 'Content-Type': 'application/json' } },
    )
+}
+
+export const config: Config = {
+    path: '/embeddings',
 }
