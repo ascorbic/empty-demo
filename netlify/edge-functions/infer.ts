@@ -2,7 +2,11 @@ import { env, pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers
 
 env.useBrowserCache = false
 env.allowLocalModels = false
-env.backends.onnx.wasm.numThreads = 1;
+// env.backends.onnx.wasm.numThreads = 1;
+
+Object.defineProperty(globalThis.navigator, 'hardwareConcurrency', {
+  value: 1,
+});
 
 
 // Construct pipeline outside of serve for faster warm starts
