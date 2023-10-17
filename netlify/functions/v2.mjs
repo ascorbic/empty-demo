@@ -1,22 +1,12 @@
-function handler() {
-    const body = new ReadableStream({
-
-        start(controller) {
-            controller.enqueue("Wait...\n\n");
-            let i = 0
-            const timer = setInterval(() => {
-                controller.enqueue(`Hello, world! ${i}\n\n`);
-                if (i++ > 10) {
-                    controller.close();
-                    clearInterval(timer);
-                }
-            }, 1000);
-        },
-    });
-
-    return new Response(body);
+// server.ts
+console.log("server.ts");
+function handler(request, context) {
+  return console.log("handler"), new Response("hello world");
 }
-
-
-
-export {handler as default}
+var config = {
+  path: "/*"
+};
+export {
+  config,
+  handler as default
+};
