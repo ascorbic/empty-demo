@@ -2,6 +2,7 @@
   "name": "empty-demo",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "repository": "git@github.com:ascorbic/empty-demo.git",
   "author": "Matt Kane <m@mk.gg>",
   "license": "MIT",
