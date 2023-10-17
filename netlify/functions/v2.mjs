@@ -1,7 +1,7 @@
 export default function handler(request, context) {
     setTimeout(() => {
         console.log("timeout");
-    }, 5000);
+    }, 9000);
 
     const body = new ReadableStream({
 
@@ -11,7 +11,7 @@ export default function handler(request, context) {
             const timer = setInterval(() => {
                 console.log("interval", i);
                 controller.enqueue(`Hello, world! ${i}\n\n`);
-                if (i++ > 20) {
+                if (i++ > 5) {
                     controller.close();
                     clearInterval(timer);
                 }
