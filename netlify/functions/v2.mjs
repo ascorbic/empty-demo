@@ -1,12 +1,9 @@
-// server.ts
-console.log("server.ts");
-function handler(request, context) {
-  return console.log("handler"), new Response("hello world");
+export default function handler(request, context) {
+    setTimeout(() => {
+        console.log("timeout");
+    }, 5000);
+    return new Response("hello world");
 }
-var config = {
-  path: "/*"
-};
-export {
-  config,
-  handler as default
+export const config = {
+    path: "/v2"
 };

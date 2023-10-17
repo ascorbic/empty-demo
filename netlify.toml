@@ -8,10 +8,6 @@ publish = "."
 # [[plugins]]
 # package = "/plugins/netlify-plugin-hello-world"
 
-[[redirects]]
- from = "/v2"
- to = "/.netlify/functions/v2"
- status = 200
 
 [[edge_functions]]
 function = "react"
