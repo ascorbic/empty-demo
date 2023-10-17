@@ -9,8 +9,9 @@ export default function handler(request, context) {
             controller.enqueue("Wait...\n\n");
             let i = 0
             const timer = setInterval(() => {
+                console.log("interval", i);
                 controller.enqueue(`Hello, world! ${i}\n\n`);
-                if (i++ > 10) {
+                if (i++ > 20) {
                     controller.close();
                     clearInterval(timer);
                 }
