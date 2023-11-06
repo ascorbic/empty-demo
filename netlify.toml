@@ -17,9 +17,6 @@ path = "/react"
 function = "og"
 path = "/og"
 
-[[edge_functions]]
-function = "cache"
-path = "/cache"
 
 [[edge_functions]]
 function = "rewrite"

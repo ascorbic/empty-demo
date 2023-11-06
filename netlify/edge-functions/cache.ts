@@ -1,4 +1,8 @@
 export default async function handler(req: Request) {
-  const hasCacheStorage = "CacheStorage" in globalThis;
-  return Response.json({ hasCacheStorage });
+  console.log(req.url)
+  return Response.json({ url: req.url });
+}
+
+export const config = {
+  path: "/url/*",
 }
