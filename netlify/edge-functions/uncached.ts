@@ -4,6 +4,5 @@ export default async function handler(req: Request) {
 }
 
 export const config = {
-  path: "/cached/*",
-  cache: "manual"
+  path: "/uncached/*",
 }
