@@ -9,18 +9,18 @@ publish = "."
 # package = "/plugins/netlify-plugin-hello-world"
 
 
-[[edge_functions]]
-function = "react"
-path = "/react"
+# [[edge_functions]]
+# function = "react"
+# path = "/react"
 
-[[edge_functions]]
-function = "og"
-path = "/og"
+# [[edge_functions]]
+# function = "og"
+# path = "/og"
 
 
-[[edge_functions]]
-function = "rewrite"
-path = "/rewrite"
+# [[edge_functions]]
+# function = "rewrite"
+# path = "/rewrite"
 ## Uncomment to use this redirect for Single Page Applications like create-react-app.
 ## Not needed for static site generators.
 #[[redirects]]
