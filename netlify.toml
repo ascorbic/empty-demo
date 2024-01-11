@@ -39,6 +39,12 @@ to = "/.netlify/images?url=:url&w=:width&h=:height&q=:quality"
 status = 200
 
 [[redirects]]
+from = "/_next/image"
+query = { url = ":url", w = ":width", h = ":height", q = ":quality" }
+to = "/.netlify/images?url=:url&w=:width&h=:height&q=:quality"
+status = 200
+
+[[redirects]]
 from = "/query301"
 query = { url = ":url", w = ":width", h = ":height", q = ":quality" }
 to = "/.netlify/images?url=:url&w=:width&h=:height&q=:quality"
