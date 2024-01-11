@@ -23,10 +23,37 @@ function = "rewrite"
 path = "/rewrite"
 ## Uncomment to use this redirect for Single Page Applications like create-react-app.
 ## Not needed for static site generators.
-#[[redirects]]
-#  from = "/*"
-#  to = "/index.html"
-#  status = 200
+[[redirects]]
+from = "/wildcard/*"
+to = "/.netlify/images/:splat"
+status = 200
+
+[[redirects]]
+from = "/wildcard301/*"
+to = "/.netlify/images/:splat"
+
+[[redirects]]
+from = "/query"
+query = { url = ":url", w = ":width", h = ":height", q = ":quality" }
+to = "/.netlify/images?url=:url&w=:width&h=:height&q=:quality"
+status = 200
+
+[[redirects]]
+from = "/query301"
+query = { url = ":url", w = ":width", h = ":height", q = ":quality" }
+to = "/.netlify/images?url=:url&w=:width&h=:height&q=:quality"
+
+[[redirects]]
+from = "/queryother"
+query = { url = ":url", w = ":width", h = ":height", q = ":quality" }
+to = "/path/image?url=:url&w=:width&h=:height&q=:quality"
+status = 200
+
+[[redirects]]
+from = "/wildcardother/*"
+to = "/path/image"
+status = 200
+
 ## (optional) Settings for Netlify Dev
 ## https://github.com/netlify/cli/blob/main/docs/netlify-dev.md#project-detection
 #[dev]
